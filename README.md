@@ -1,4 +1,4 @@
-للعربية إضغط هنا: [الوثائق](/docs/ar)
+للعربية اضغط هنا: [الوثائق](/docs/ar)
 
 # Intro
 This is a collection of my personal development environments, feel free to use any of them;
