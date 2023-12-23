@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # https://github.com/nix-community/nixGL (for reference)
     nixgl.url = "github:guibou/nixGL";
   };
 
@@ -20,6 +21,8 @@
         inherit system;
       };
       
+      # These specific versions are REQUIRED by react native
+      # Please do NOT mess with them unless you know what you're doing.
       buildToolsVersion =  "33.0.0";
       androidComposition = pkgs.androidenv.composeAndroidPackages {
         toolsVersion = null;
@@ -34,28 +37,32 @@
       packages = with pkgs; [
         nodejs_20
         jdk17
-        watchman
-        androidComposition.platform-tools
-        pkgs.nixgl.nixGLIntel
+        watchman # Required for 'metro' for better performance 
+        androidComposition.platform-tools # Expose platform tools (aka adb & other executables)
+        pkgs.nixgl.nixGLIntel # Fixes GPU usage issue; GLIntel only supports AMD & Intel GPUs, for Nvidia you might wanna use other options.
       ];
-
+    
+      # Expose required ENV variables
       ANDROID_SDK_ROOT = "${androidComposition.androidsdk}/libexec/android-sdk";
       ANDROID_NDK_ROOT = "${ANDROID_SDK_ROOT}/ndk-bundle";
       GRADLE_OPTS = "-Dorg.gradle.project.android.aapt2FromMavenOverride=${ANDROID_SDK_ROOT}/build-tools/${buildToolsVersion}/aapt2";
 
+      # Pre-setup an emulator
+      # Usually available @ $android/bin/
       android = pkgs.androidenv.emulateApp {
-        configOptions =  { "hw.gpu.enabled" = "yes"; };
+        configOptions =  { "hw.gpu.enabled" = "yes"; }; # Enable GPU acceleration
         name = "AlGhoul's-Emulator";
         platformVersion = "29";
         abiVersion = "x86";
         systemImageType = "google_apis_playstore";
-        androidEmulatorFlags = "-skin 720x1280 -accel on -gpu host -qemu -enable-kvm ";
+        # Resolution could be anything you want, keep the others if your Hardware supports KVM (for better performance)
+        androidEmulatorFlags = "-skin 720x1280 -accel on -gpu host -qemu -enable-kvm";
       };
 
       shellHook = ''
-        echo "Node: `${pkgs.nodejs_20}/bin/node --version`"
-        nixGLIntel ${android}/bin/run-test-emulator
-        exec fish
+        echo "Node: `${pkgs.nodejs_20}/bin/node --version`" # Shows Node version on shell start
+        nixGLIntel ${android}/bin/run-test-emulator # Launch the emulator (Replace nixGLIntel accordingly, for info refer to nixGL docs)
+        exec fish  # You can remove this if you're using normal bash
         '';
     };
   };
