@@ -1,4 +1,5 @@
-للعربية اضغط هنا: [بيئة عمل ريأكت نيتف](../docs/ar/بيئة ريأكت نيتف.md).
+
+للعربية اضغط هنا: [بيئة عمل ريأكت نيتف](../docs/ar/ReactNativeDev_AR.md)
 # Intro
 This is a [React Native](https://reactnative.dev/) development environment and it is meant to install and set everything up
 automatically for convenient and quicker development.
