@@ -8,6 +8,10 @@
         path = ./ReactNative;
         description = "A React Native development environment with emulator included";
       };
+      cpp = {
+        path = ./Cpp;
+        description = "A Cpp development environment with boost libraries included";
+      };
     };
   };
 }
