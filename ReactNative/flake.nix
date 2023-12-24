@@ -35,11 +35,12 @@
 
     in pkgs.mkShell rec {
       packages = with pkgs; [
-        nodejs_20
+        nodejs_18
         jdk17
         watchman # Required for 'metro' for better performance 
         androidComposition.platform-tools # Expose platform tools (aka adb & other executables)
         pkgs.nixgl.nixGLIntel # Fixes GPU usage issue; GLIntel only supports AMD & Intel GPUs, for Nvidia you might wanna use other options.
+        nodePackages.eas-cli # Expo's EAS Update CLI
       ];
     
       # Expose required ENV variables
