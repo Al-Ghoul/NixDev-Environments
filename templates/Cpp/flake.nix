@@ -11,11 +11,17 @@
     pkgs = import nixpkgs { inherit system; };
   in
   {
-    devShells."${system}".default = pkgs.mkShell {
+    devShells."${system}".default = (pkgs.mkShell.override { stdenv = pkgs.clangStdenv; }) {
       packages = with pkgs; [
         boost
-        gcc
+        clang-tools
+        vscode-extensions.vadimcn.vscode-lldb.adapter
       ];
+
+      shellHook = ''
+        echo "The cpp-dev template env was set successfully";
+        exec fish
+      '';
     };
   };
 }
