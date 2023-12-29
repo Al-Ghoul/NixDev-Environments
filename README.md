@@ -23,13 +23,13 @@ and put them under version control systems.
 
 ### Templates
 
-for example to get a template from a vcs you can run the following:
+For example to get a template from a vcs (github in this context) you can run the following:
 
 ```bash
 nix flake init --template "github:<username>/<repository_name>#<template_name>"
 ```
 
-replacing `username`, `repository_name` and `template` accordingly; For example to get an identical,
+replacing `username`, `repository_name` and `template_name` accordingly; For example to get an identical,
 reproducible environment/template for c/cpp development as mine you can run the following:
 
 ```bash
@@ -46,7 +46,7 @@ To get just an environment with no boilerplate nor flakes copied to your current
 nix develop "github:<username>/repository_name#<environment_name>"
 ```
 
-replacing `username`, `repository_name` and `template` accordingly; For example to get an identical,
+replacing `username`, `repository_name` and `environment_name` accordingly; For example to get an identical,
 reproducible environment for c/cpp development as mine you can run the following:
 
 ```bash
