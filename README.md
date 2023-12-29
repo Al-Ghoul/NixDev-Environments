@@ -11,10 +11,10 @@ we don't have any templates (yet) for issues but please keep it simple and ask t
 
 The following table summarizes what this repo provides:
 
-| Name         | Environment        | Template           | Description                                        |
-| ------------ | ------------------ | ------------------ | -------------------------------------------------- |
-| react-native | :x:                | :white_check_mark: | An environment for react native and expo projects. |
-| cpp-dev      | :white_check_mark: | :white_check_mark: | A 'clang' environment for c/c++ projects.          |
+| Name                                   | Environment        | Template           | Description                                        |
+| -------------------------------------- | ------------------ | ------------------ | -------------------------------------------------- |
+| [react-native](/templates/ReactNative) | :x:                | :white_check_mark: | An environment for react native and expo projects. |
+| cpp-dev                                | :white_check_mark: | :white_check_mark: | A 'clang' environment for c/c++ projects.          |
 
 ## Usage guide
 
