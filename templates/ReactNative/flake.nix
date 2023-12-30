@@ -39,7 +39,7 @@
           jdk17
           watchman # Required for 'metro' for better performance 
           androidComposition.platform-tools # Expose platform tools (aka adb & other executables)
-          nixgl.nixGLIntel # Fixes GPU usage issue; GLIntel only supports AMD & Intel GPUs, for Nvidia you might wanna use other options.
+          pkgs.nixgl.nixGLIntel # Fixes GPU usage issue; GLIntel only supports AMD & Intel GPUs, for Nvidia you might wanna use other options.
           nodePackages.eas-cli # Expo's EAS Update CLI
         ];
       
