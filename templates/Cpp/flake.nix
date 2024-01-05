@@ -16,6 +16,7 @@
         boost
         clang-tools
         vscode-extensions.vadimcn.vscode-lldb.adapter
+        nodejs # For neovim's LSP (Remove it if you're not using neovim)
       ];
 
       shellHook = ''

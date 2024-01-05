@@ -3,15 +3,20 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # https://github.com/nix-community/nixGL (for reference)
+    nixgl.url = "github:guibou/nixGL";
   };
 
-  outputs = { self, nixpkgs }: rec
+  outputs = { self, nixpkgs, nixgl }: rec
   {
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
+        config.allowUnfree = true;
+        config.android_sdk.accept_license = true;
+        overlays = [ nixgl.overlay ];
       };
-      inherit (import ./environments/envs.nix { inherit pkgs; }) cpp-dev; 
+      inherit (import ./shells/index.nix { inherit pkgs nixgl; }) cpp-dev nextjs-dev laravel-dev django-dev reactnative-dev;
       templatesDIR = "templates";
 
       templates = {
@@ -23,6 +28,11 @@
         cpp-dev = {
           path = ./${templatesDIR}/Cpp;
           description = "A Cpp development environment with boost libraries included";
+        };
+
+        django-dev = {
+          path = ./${templatesDIR}/Python/Django;
+          description = "A Django development environment with python3.11 and other dependencies";
         };
       };
     };

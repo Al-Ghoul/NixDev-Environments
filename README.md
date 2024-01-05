@@ -11,10 +11,13 @@ we don't have any templates (yet) for issues but please keep it simple and ask t
 
 The following table summarizes what this repo provides:
 
-| Name                                   | Environment        | Template           | Description                                        |
-| -------------------------------------- | ------------------ | ------------------ | -------------------------------------------------- |
-| [react-native](/templates/ReactNative) | :x:                | :white_check_mark: | An environment for react native and expo projects. |
-| cpp-dev                                | :white_check_mark: | :white_check_mark: | A 'clang' environment for c/c++ projects.          |
+| Name                                   | Shell              | Template           | Description                                 |
+| -------------------------------------- | ------------------ | ------------------ | ------------------------------------------- |
+| [react-native](/templates/ReactNative) | :white_check_mark: | :white_check_mark: | A shell for react native and expo projects. |
+| cpp-dev                                | :white_check_mark: | :white_check_mark: | A 'clang' shell for c/c++ projects.         |
+| nextjs-dev                             | :white_check_mark: | :x:                | A shell for nextjs, js & ts projects.       |
+| laravel-dev                            | :white_check_mark: | :x:                | A shell for laravel & php projects.         |
+| django-dev                             | :white_check_mark: | :white_check_mark: | A shell for django projects.                |
 
 ## Usage guide
 
