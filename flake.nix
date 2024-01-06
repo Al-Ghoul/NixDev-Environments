@@ -7,8 +7,8 @@
     nixgl.url = "github:guibou/nixGL";
   };
 
-  outputs = { self, nixpkgs, nixgl }: rec
-  {
+  outputs = { self, nixpkgs, nixgl }:
+  let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
@@ -16,8 +16,9 @@
         config.android_sdk.accept_license = true;
         overlays = [ nixgl.overlay ];
       };
-      inherit (import ./shells/index.nix { inherit pkgs nixgl; }) cpp-dev nextjs-dev laravel-dev django-dev reactnative-dev;
       templatesDIR = "templates";
+    in { 
+      inherit (import ./shells/index.nix { inherit pkgs nixgl; }) cpp-dev nextjs-dev laravel-dev django-dev reactnative-dev;
 
       templates = {
         react-native = {
