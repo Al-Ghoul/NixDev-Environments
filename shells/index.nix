@@ -1,4 +1,3 @@
-{ pkgs, nixgl }:
 
 with pkgs; {
   cpp-dev = (mkShell.override { stdenv = clangStdenv; }) {

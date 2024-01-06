@@ -15,7 +15,7 @@ The following table summarizes what this repo provides:
 | -------------------------------------- | ------------------ | ------------------ | ------------------------------------------- |
 | [react-native](/templates/ReactNative) | :white_check_mark: | :white_check_mark: | A shell for react native and expo projects. |
 | cpp-dev                                | :white_check_mark: | :white_check_mark: | A 'clang' shell for c/c++ projects.         |
-| nextjs-dev                             | :white_check_mark: | :x:                | A shell for nextjs, js & ts projects.       |
+| nextjs-dev                             | :white_check_mark: | :white_check_mark: | A shell for nextjs, js & ts projects.       |
 | laravel-dev                            | :white_check_mark: | :x:                | A shell for laravel & php projects.         |
 | django-dev                             | :white_check_mark: | :white_check_mark: | A shell for django projects.                |
 

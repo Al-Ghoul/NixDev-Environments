@@ -35,6 +35,11 @@
           path = ./${templatesDIR}/Python/Django;
           description = "A Django development environment with python3.11 and other dependencies";
         };
+
+        nextjs-dev = {
+          path = ./${templatesDIR}/Javascript/NextJS;
+          description = "A NextJS development environment";
+        };
       };
     };
 }

@@ -10,13 +10,13 @@ For English refer to [Docs](../../)
 
 الجدول التالي يلخص ما يقدمه هذا المخزون:
 
-| الإسم                                         | بيئة               | قالب               | الوصف                                 |
-| --------------------------------------------- | ------------------ | ------------------ | ------------------------------------- |
-| [react-native](/docs/ar/ReactNativeDev_AR.md) | :white_check_mark: | :white_check_mark: | بيئة عمل لمشاريع إكسبو و ريأكت نيتف   |
-| cpp-dev                                       | :white_check_mark: | :white_check_mark: | (C و C++) لـ 'clang' بيئة عمل         |
-| nextjs-dev                                    | :white_check_mark: | :x:                | بيئة عمل لمشاريع نيكست. |
-| laravel-dev                                   | :white_check_mark: | :x:                | بيئة عمل لمشاريع لارافيل.   |
-| django-dev                                    | :white_check_mark: | :white_check_mark: | بيئة عمل لمشاريع جانجو.          |
+| الإسم                                         | بيئة               | قالب               | الوصف                               |
+| --------------------------------------------- | ------------------ | ------------------ | ----------------------------------- |
+| [react-native](/docs/ar/ReactNativeDev_AR.md) | :white_check_mark: | :white_check_mark: | بيئة عمل لمشاريع إكسبو و ريأكت نيتف |
+| cpp-dev                                       | :white_check_mark: | :white_check_mark: | (C و C++) لـ 'clang' بيئة عمل       |
+| nextjs-dev                                    | :white_check_mark: | :white_check_mark: | بيئة عمل لمشاريع نيكست.             |
+| laravel-dev                                   | :white_check_mark: | :x:                | بيئة عمل لمشاريع لارافيل.           |
+| django-dev                                    | :white_check_mark: | :white_check_mark: | بيئة عمل لمشاريع جانجو.             |
 
 ## دليل الإستخدام
 
