@@ -57,3 +57,25 @@ nix develop "github:Al-Ghoul/NixDev-Environments#cpp-dev"
 ```
 
 This is going to get all the packages required and set the environment for you automatically.
+
+You can also ask nix to list all the outputs of the flake for example:
+
+```bash
+nix flake show github:Al-Ghoul/NixDev-Environments
+```
+
+output will be something like:
+
+```
+github:Al-Ghoul/NixDev-Environments/95b24b13fb4594817d1c747c418f055aa1c34daa
+├───cpp-dev: unknown
+├───django-dev: unknown
+├───laravel-dev: unknown
+├───nextjs-dev: unknown
+├───reactnative-dev: unknown
+└───templates
+    ├───cpp-dev: template: A Cpp development environment with boost libraries included
+    ├───django-dev: template: A Django development environment with python3.11 and other dependencies
+    ├───nextjs-dev: template: A NextJS development environment
+    └───react-native: template: A React Native development environment with emulator included
+```

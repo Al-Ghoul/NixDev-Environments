@@ -54,3 +54,25 @@ nix develop "github:Al-Ghoul/NixDev-Environments#cpp-dev"
 ```
 
 هذا سيقوم بجلب جميع الحزم اللازمة لتنصيب بيئة العمل تلقائياً.
+
+يمكنك أيضاً أن تطلب من نكس أن تعرض لك جميع مخرجات الرقيقة, علي سبيل المثال عند أجراء الآتي:
+
+```bash
+nix flake show github:Al-Ghoul/NixDev-Environments
+```
+
+سيقرض لك قائمة مقاربة من الآتي:
+
+```
+github:Al-Ghoul/NixDev-Environments/95b24b13fb4594817d1c747c418f055aa1c34daa
+├───cpp-dev: unknown
+├───django-dev: unknown
+├───laravel-dev: unknown
+├───nextjs-dev: unknown
+├───reactnative-dev: unknown
+└───templates
+    ├───cpp-dev: template: A Cpp development environment with boost libraries included
+    ├───django-dev: template: A Django development environment with python3.11 and other dependencies
+    ├───nextjs-dev: template: A NextJS development environment
+    └───react-native: template: A React Native development environment with emulator included
+```
