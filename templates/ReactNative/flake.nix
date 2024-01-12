@@ -64,7 +64,6 @@
           echo "Node: `${pkgs.nodejs_18}/bin/node --version`" # Shows Node version on shell start
           echo 'To launch the emulator run: nixGLIntel $android/bin/run-test-emulator'  # Launch the emulator (Replace nixGLIntel accordingly, for info refer to nixGL docs)
           echo "If you're on nvidia replace 'nixGLIntel' accordingly"
-          exec fish  # You can remove this if you're using normal bash
           '';
       };
   };

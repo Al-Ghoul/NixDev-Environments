@@ -19,7 +19,6 @@
       shellHook = ''
         echo "NextJS's development template env was set successfully"
         echo "`${pkgs.nodejs}/bin/node --version`"
-        exec fish
       '';
     };
   };

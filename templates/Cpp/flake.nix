@@ -21,7 +21,6 @@
 
       shellHook = ''
         echo "The cpp-dev template env was set successfully";
-        exec fish
       '';
     };
   };

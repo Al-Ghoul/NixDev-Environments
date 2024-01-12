@@ -55,7 +55,6 @@
         echo "Django's development template env was set successfully"
         echo "`${pkgs.python3.interpreter} --version`"
         echo "Django version: `${pkgs.python3.interpreter} -m django --version`"
-        exec fish
       '';
     };
   };

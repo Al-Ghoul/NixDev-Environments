@@ -12,7 +12,6 @@ with pkgs; {
 
     shellHook = ''
       echo "The cpp-dev was set successfully";
-      exec fish
     '';
   };
 
@@ -26,7 +25,6 @@ with pkgs; {
 
     shellHook = ''
       echo "The nextjs-dev shell was set successfully"
-      exec fish
     '';
   };
 
@@ -41,7 +39,6 @@ with pkgs; {
 
     shellHook = ''
       echo "The laravel-dev shell was set successfully"
-      exec fish
     '';
   };
 
@@ -93,7 +90,6 @@ with pkgs; {
         echo "Django's development template env was set successfully"
         echo "`${python3.interpreter} --version`"
         echo "Django version: `${python3.interpreter} -m django --version`"
-        exec fish
     '';
   };
 
@@ -145,7 +141,6 @@ with pkgs; {
         echo "Node: `${nodejs_21}/bin/node --version`" # Shows Node version on shell start
         echo 'To launch the emulator run: nixGLIntel $android/bin/run-test-emulator'  # Launch the emulator (Replace nixGLIntel accordingly, for info refer to nixGL docs)
         echo "If you're on nvidia replace 'nixGLIntel' accordingly"
-        exec fish  # You can remove this if you're using normal bash
       '';
   };
 }
